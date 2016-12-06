@@ -32,9 +32,9 @@ var hangman = {
 			this.display();
 			console.log("-----\nthis should be below the display log");
 			///////////////////////////////////////Play sound code
-			this.playSound('http://www.moviesoundclips.net/movies1/tron/radical.mp3');
+			this.playSound('http://themushroomkingdom.net/sounds/wav/sm64/sm64_mario_thank_you.wav');
 			//end of game
-			setTimeout(function(){ alert("Congratulations, Mario you win.\nYou got the word in question! Amazing Job!" + "\nYou got the word:  " + winner);}, 1000);
+			setTimeout(function(){ alert("Congratulations, Mario is alive.\nYou got the word in question! Amazing Job!" + "\nYou got the word:  " + winner);}, 1000);
 			setTimeout(function(){ hangman.resetGame(); }, 1000);
 		}
 	},
@@ -43,13 +43,13 @@ var hangman = {
 		
 		if(this.choices.indexOf(val) >= 0){ // checks to see if you already pressed a given key
 			console.log("YOU ALREADY TRIED THAT");
-			this.playSound('http://datacore.sciflicks.com/tron/sounds/tron_bit_no.wav');
+			this.playSound('http://themushroomkingdom.net/sounds/wav/smb3/smb3_bowser_falls.wav');
 		return;
 		}
 
 		if(this.keyboard.indexOf(val) < 0 || this.attempts <= 0) { // checks to see if you pressed something besides a letter
-			console.log("you didn't press a letter");
-			this.playSound('http://datacore.sciflicks.com/tron/sounds/tron_bit_no.wav');
+			console.log("You didn't press a letter");
+			this.playSound('http://themushroomkingdom.net/sounds/wav/smb3/smb3_bowser_falls.wav');
 		return;
 		}
 
@@ -57,7 +57,7 @@ var hangman = {
 		document.getElementById(val).style.backgroundColor = "#1dc9f1"; //changes the background of the key most recently pressed to show it's been pressed
 
 		if(this.answer.indexOf(val) >= 0){ //checking to see if you picked a letter that is in the answer
-			this.playSound('http://datacore.sciflicks.com/tron/sounds/tron_bit_yes.wav');
+			this.playSound('http://themushroomkingdom.net/sounds/wav/smb3/smb3_power-up.wav');
 			for(var i = 0; i < this.answer.length; i++){ //loop to check for multiple instances of the letter you just picked in the answer
 				if(val === this.answer[i]){
 					testArr.push(i);
@@ -71,7 +71,7 @@ var hangman = {
 			this.checkWin();
 		}
 		else {
-			this.playSound('http://datacore.sciflicks.com/tron/sounds/tron_bit_no.wav');
+			this.playSound('http://themushroomkingdom.net/sounds/wav/smb3/smb3_player_down.wav');
 			this.attempts--;
 			this.display();
 			if(this.attempts <= 0) {//if statement to check for the loss
@@ -79,7 +79,7 @@ var hangman = {
 				loserAnswer = loserAnswer.replace(/\,/g,'');
 				this.losses++;
 				//play losing sound
-				this.playSound('http://www.moviesoundclips.net/movies1/tron/endofline.mp3');
+				this.playSound('http://themushroomkingdom.net/sounds/wav/sm64/sm64_game_over.wav');
 				setTimeout( function loseGame() {
 				alert(" You Lost A Life\n Please try again\n Your word was:  " + loserAnswer + "\n Try again next time");
 				hangman.resetGame();
@@ -117,10 +117,7 @@ var hangman = {
 			keyBackground.style.backgroundColor = "#092e47";
 		}
 		this.display();
-		this.playSound('http://www.moviesoundclips.net/movies1/tron/battle.mp3');
-			
-		//	https://googledrive.com/host/0B75VjK_3Ysw1RHRJWnR5Y1lGQ1k/battle.mp3
-		// https://drive.google.com/file/d/0B75VjK_3Ysw1aG5SSXdyUlRqSG8/view?usp=sharing
+		this.playSound('http://themushroomkingdom.net/sounds/wav/smb3/smb3_fortress_clear.wav');
 		return;
 	}
 };
