@@ -1,7 +1,8 @@
 body {
 
 	background-image: url("http://www.mariomayhem.com/fun/smb_level_editor/images/overworld_bg.png");
-	background-size:     cover;                    
+	background-size:     cover;  
+	height: 600px;                  
     background-repeat:   no-repeat;
     background-position: center center;
     padding-left: 10px;
@@ -25,15 +26,32 @@ body {
 
 }
 
-footer {
-	text-align: center;
-	background-color: black;
-	color: white;
-	width: 100%;
-}
 
 h1 {
     font-family: 'Bangers', cursive;
     font-size: 400%;
 
+}
+
+
+.container { 
+	position:relative; 
+	bottom: 100px;
+}
+
+.imgA1 { 
+	position:absolute;
+	z-index: 3; 
+	top: 180px;
+	left: 100px;
+} 
+.imgB1 { 
+	position:absolute; 
+	top: 150px; 
+	z-index: 1;
+	height: 400px; 
+} 
+
+.container-fluid {
+	padding-top:20px;
 }
