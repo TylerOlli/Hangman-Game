@@ -4,17 +4,59 @@
 		<meta charset="UTF-8">
 		<title>Hang Man</title>
 		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+		<link rel="stylesheet" type="text/css" href="font-awesome.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<link rel="stylesheet" href="assets/css/styles1.css">
+		<link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet"> 
+		<link rel="stylesheet" href="assets/css/style.css">
 
 	</head>
 
-<header>
-<h1>Let's Play Hangman</h1>
-</header>
-
 <body>
+
+<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12 text-center" id="title"><h1>Let's Play Hangman: Mario Edition</h1></div>
+			
+		</div>
+	</div>
+
+		<div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-primary text-center">
+                    <h2>Press a Key to Guess a Letter</h3>
+                </div>
+                <div id="keyboard" class="container-fluid text-center">
+                
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <h2>Guess the word below:</h2>
+                    <h2 id="hidden">-------s-</h2>
+                    <h2>Wins:  <span id="wins">0</span></h2>
+                    <h2>Losses:  <span id="losses">0</span></h2>
+                    <h2>Guesses Remaining:  <span id="attempts">3</span></h2>
+                    <img src="https://upload.wikimedia.org/wikipedia/en/9/99/MarioSMBW.png"</img>	
+                </div>
+	</div>
+
+
+		<div class="container">
+		<div class="row">
+			<div class="col-md-6 text-center" id="answer"></div>
+		</div>
+	</div>
+
 
 <script src="assets/javascript/game.js"></script>
 </body>
+<footer>
+	<div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+        <p class="text-muted">Copyright Tyler Olli Designs 2016</p>
+      </div>
+      </div>
+</footer>
 </html>
